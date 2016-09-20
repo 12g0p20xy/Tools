@@ -1,0 +1,42 @@
+
+// 主题色
+$primary-color: red;
+$secondary-color: blue;
+
+// 背景
+$body-bg: #F2F2F2;
+// $body-bg: #333 url(../img/bg.jpg) no-repeat;
+
+// 链接
+$link: #2094c4;
+
+// 字体
+$font-color: #333;
+$font-size: 16px;
+$fontfamily: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+
+// 按钮
+$btn-color: #fff;
+$btn-bg: #20BF06;
+
+@import 'reset';
+@import 'general';
+
+.box{
+	width: 150px;
+	height: 150px;
+	border: 2px solid $secondary-color;
+	background: $primary-color;
+	span{
+		color: blue;
+	}
+}
+.login{
+	width: 300px;
+}
+.s2 li{
+	width: 100px;
+	height: 100px;
+	border: 1px dashed silver;
+	@include inline-block;
+}

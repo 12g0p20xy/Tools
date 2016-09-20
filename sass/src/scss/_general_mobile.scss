@@ -1,0 +1,78 @@
+/* General
+***********************/
+*{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	color: $font-color;
+	font-family: sans-serif;
+	background: $body-bg;
+	background-size: 100%;
+	padding-bottom: 20%;
+}
+a{
+	color: $link;
+	&:hover{
+		color: lighten($link, 20%);
+	}
+	text-decoration: none;
+}
+p{
+	font-size: $font-size;
+	text-align: justify;
+	word-break: break-all;
+	margin-bottom: .5em;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.container{
+	position: relative;
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+img{
+	display: block;
+	width: 100%;
+}
+section{
+	padding: 0 4%;
+}
+.btn {
+	display: block;
+	width: 100%;
+	padding: .5em;
+	color: $btn-color;
+	font-size: $font-size;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	outline: none;
+	background: $btn-bg;
+	border-radius: 2px;
+}
+input[type=text] {
+	width: 100%;
+	padding: .5em;
+	line-height: normal;
+	border: none;
+	outline: none;
+	color: $font-color;
+	text-indent: 1em;
+	border-radius: 2px;
+	margin-bottom: .6rem;
+}
