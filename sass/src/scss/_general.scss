@@ -17,6 +17,9 @@ a{
 	&:hover{
 		color: lighten($link, 20%);
 	}
+	&:active{
+		color: darken($link, 10%);
+	}
 	text-decoration: none;
 }
 p{
@@ -31,6 +34,9 @@ p{
 .right{
 	float: right;
 }
+section{
+	margin: $margin;
+}
 .container{
 	position: relative;
 	width: 1000px;
@@ -41,33 +47,87 @@ img{
 	display: block;
 	width: 100%;
 }
-.btn {
-	display: block;
-	width: 100%;
-	padding: .5em;
-	color: $btn-color;
-	font-size: $font-size;
-	font-weight: bold;
-	text-align: center;
-	border: none;
-	outline: none;
-	background: $btn-bg;
-	border-radius: 2px;
-}
-input[type=text] {
-	width: 100%;
-	padding: .5em;
-	line-height: normal;
-	border: none;
-	outline: none;
-	color: $font-color;
-	text-indent: 1em;
-	border-radius: 2px;
-	margin-bottom: .6rem;
+
+// for mobile
+@mixin mobile{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
+// for ie
 @mixin inline-block{
 	display: inline-block;
 	*display: inline;
 	zoom: 1;
+}
+
+@mixin opacity($opacity){
+	opacity: $opacity;
+	$opacity-ie: $opacity*100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+// css3
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// @mixin box-shadow
+
+@mixin translate3d($x, $y, $z){
+	-webkit-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-ms-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+	transform: translate3d($x, $y, $z);
+}
+
+@mixin transition($args...){
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+// 垂直居中
+@mixin vercenter{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate3d(-50%, -50%, 0);
+}
+
+// 输入框和按钮们
+@mixin input{
+	width: 100%;
+	margin: .5em 0;
+	padding: .5em 0;
+	line-height: normal;
+	border: none;
+	outline: none;
+	@include border-radius(2px);
+}
+input[type="text"] {
+	@include input;
+	color: $font-color;
+	text-indent: 1em;
+}
+.btn{
+	@include input;
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	color: $btn-color;
+	font-size: $btn-fz;
+	background: $btn-bg;
+	&:active{
+		background: darken($btn-bg, 10%);
+	}
 }

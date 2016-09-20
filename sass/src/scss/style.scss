@@ -3,6 +3,10 @@
 $primary-color: red;
 $secondary-color: blue;
 
+// 主间距
+$margin: 30px;
+$padding: 15px;
+
 // 背景
 $body-bg: #F2F2F2;
 // $body-bg: #333 url(../img/bg.jpg) no-repeat;
@@ -17,22 +21,40 @@ $fontfamily: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro
 
 // 按钮
 $btn-color: #fff;
+$btn-fz: 14px;
 $btn-bg: #20BF06;
 
 @import 'reset';
 @import 'general';
 
+
+header{
+	width: 100%;
+	height: 200px;
+	.container{
+		outline: 1px solid red;
+	}
+}
 .box{
+	position: relative;
 	width: 150px;
 	height: 150px;
 	border: 2px solid $secondary-color;
 	background: $primary-color;
+	@include transition(opacity, .3s, ease-out);
+	&:hover{
+		@include opacity(.3);
+	}
 	span{
+		display: block;
 		color: blue;
+		@include vercenter;
 	}
 }
 .login{
 	width: 300px;
+	border: 1px dashed #ccc;
+	padding: $padding;
 }
 .s2 li{
 	width: 100px;

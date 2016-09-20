@@ -25,7 +25,9 @@ module.exports = function(grunt){
 		cssmin: {
 		  options: {
 		    shorthandCompacting: false,
-		    roundingPrecision: -1
+		    roundingPrecision: -1,
+		    compatibility : 'ie8', //设置兼容模式
+		    noAdvanced : true //取消高级特性  
 		  },
 		  // 合并文件
 		  target: {
@@ -38,7 +40,7 @@ module.exports = function(grunt){
 		// watch-检测文件改动
 		watch: {
 		  build: {
-		    files: ['src/scss/style.scss'],
+		    files: ['src/scss/*.scss'],
 		    tasks: ['clean', 'sass', 'cssmin'],
 		    options: {
 		      spawn: false
