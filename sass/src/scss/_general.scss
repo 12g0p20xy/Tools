@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* General
 ***********************/
 input[type="submit"], input[type="reset"], input[type="button"], select, button {
@@ -16,6 +18,11 @@ a{
 	color: $link;
 	&:hover{
 		color: lighten($link, 20%);
+
+		> img{
+			@include opacity(.8);
+		}
+
 	}
 	&:active{
 		color: darken($link, 10%);
@@ -48,80 +55,25 @@ img{
 	width: 100%;
 }
 
-// for mobile
-@mixin mobile{
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
-
-// for ie
-@mixin inline-block{
-	display: inline-block;
-	*display: inline;
-	zoom: 1;
-}
-
-@mixin opacity($opacity){
-	opacity: $opacity;
-	$opacity-ie: $opacity*100;
-	filter: alpha(opacity=$opacity-ie);
-}
-
-// css3
-@mixin border-radius($radius){
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-}
-
-// @mixin box-shadow
-
-@mixin translate3d($x, $y, $z){
-	-webkit-transform: translate3d($x, $y, $z);
-	-moz-transform: translate3d($x, $y, $z);
-	-ms-transform: translate3d($x, $y, $z);
-	-o-transform: translate3d($x, $y, $z);
-	transform: translate3d($x, $y, $z);
-}
-
-@mixin transition($args...){
-	-webkit-transition: $args;
-	-moz-transition: $args;
-	-ms-transition: $args;
-	-o-transition: $args;
-	transition: $args;
-}
-
-// 垂直居中
-@mixin vercenter{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	@include translate3d(-50%, -50%, 0);
-}
-
 // 输入框和按钮们
-@mixin input{
+@mixin input-reset{
+	display: block; // 修复ie7的bug
 	width: 100%;
-	margin: .5em 0;
+	margin: 1em 0;
 	padding: .5em 0;
 	line-height: normal;
 	border: none;
 	outline: none;
 	@include border-radius(2px);
 }
-input[type="text"] {
-	@include input;
+input[type="text"]{
+	@include input-reset;
 	color: $font-color;
-	text-indent: 1em;
+	text-indent: .5em;
+	margin-left: 0;
 }
-.btn{
-	@include input;
-	display: block;
+.btn, a.btn{
+	@include input-reset;
 	font-weight: bold;
 	text-align: center;
 	color: $btn-color;

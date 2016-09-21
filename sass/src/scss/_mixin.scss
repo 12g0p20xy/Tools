@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+// mobile
+@mixin mobile{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// utilities
+@mixin inline-block{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+@mixin opacity($opacity){
+	opacity: $opacity;
+	$opacity-ie: $opacity*100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin clearfix{
+	&:before, &:after{content:""; display:table;}
+	&:after{clear:both;}
+	*zoom:1;
+}
+
+// css3
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($str){
+	-webkit-box-shadow: $str;
+	-moz-box-shadow: $str;
+	-ms-box-shadow: $str;
+	-o-box-shadow: $str;
+	box-shadow: $str;
+}
+
+@mixin translate($x, $y, $z:false){
+	@if($z){
+		-webkit-transform: translate3d($x, $y, $z);
+		-moz-transform: translate3d($x, $y, $z);
+		-ms-transform: translate3d($x, $y, $z);
+		-o-transform: translate3d($x, $y, $z);
+		transform: translate3d($x, $y, $z);
+	}
+	@else{
+		-webkit-transform: translate($x, $y);
+		-moz-transform: translate($x, $y);
+		-ms-transform: translate($x, $y);
+		-o-transform: translate($x, $y);
+		transform: translate($x, $y);
+	}
+}
+
+@mixin transition($str){
+	-webkit-transition: $str;
+	-moz-transition: $str;
+	-ms-transition: $str;
+	-o-transition: $str;
+	transition: $str;
+}
+
+// 水平垂直居中
+@mixin vercenter{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+}	

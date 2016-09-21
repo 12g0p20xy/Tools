@@ -8,22 +8,26 @@
 
 // for mobile
 
-@mixin mobile
+@include mobile
 
 // for ie
 
-@mixin inline-block
+@include inline-block
 
-@mixin opacity($opacity)
+@include opacity(.6)
+
+@include clearfix
 
 // css3
 
-@mixin border-radius($radius)
+@include border-radius(4px)
 
-@mixin translate3d($x, $y, $z)
+@include translate(-50%) 或者 @include translate(-50%, -50%, 0)
 
-@mixin transition($args...)
+@include box-shadow(3px 3px 6px rgba(0,0,0,.6));
+
+@include transition(opacity .3s ease-out)
 
 // 垂直居中
 
-@mixin vercenter
+@include vercenter
