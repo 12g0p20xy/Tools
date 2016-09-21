@@ -8,7 +8,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-// utilities
+// utils
 @mixin inline-block{
 	display: inline-block;
 	*display: inline;
@@ -25,6 +25,32 @@
 	&:before, &:after{content:""; display:table;}
 	&:after{clear:both;}
 	*zoom:1;
+}
+
+// 水平垂直居中
+@mixin vercenter{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+}	
+
+// 文本截取
+// 单行 @include ellipsis
+// 多行 @include ellipsis(3)
+@mixin ellipsis($line:false){
+	@if($line){
+		overflow : hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: $line;
+		-webkit-box-orient: vertical;
+	}
+	@else{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 }
 
 // css3
@@ -68,11 +94,3 @@
 	-o-transition: $str;
 	transition: $str;
 }
-
-// 水平垂直居中
-@mixin vercenter{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	@include translate(-50%, -50%);
-}	

@@ -132,6 +132,20 @@ header {
   .row:after {
     clear: both; }
 
+.s1 .p1 {
+  width: 20em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.s1 .p2 {
+  width: 20em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
+
 .box, .box2 {
   position: relative;
   width: 150px;
@@ -164,12 +178,22 @@ header {
   padding: 15px; }
 
 .s2 li {
+  position: relative;
   width: 100px;
   height: 100px;
   border: 1px dashed silver;
   display: inline-block;
   *display: inline;
   zoom: 1; }
+  .s2 li a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .box2 {
   -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
@@ -183,14 +207,25 @@ header {
   -o-transform: translate3d(30px, -60px, 0);
   transform: translate3d(30px, -60px, 0); }
 
-.pic {
-  width: 180px;
-  margin-left: 15px;
+.s3 .grid-item {
+  width: 25%;
+  margin-bottom: 10px;
   overflow: hidden;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -ms-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s; }
+  .s3 .grid-item:hover {
+    -webkit-box-shadow: 3px 3px 12px #666;
+    -moz-box-shadow: 3px 3px 12px #666;
+    -ms-box-shadow: 3px 3px 12px #666;
+    -o-box-shadow: 3px 3px 12px #666;
+    box-shadow: 3px 3px 12px #666; }
 
 /*# sourceMappingURL=style.css.map */
