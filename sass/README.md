@@ -1,3 +1,12 @@
+## Intro
+
+前端模板
+
+
+编辑src/style.scss文件和src/global.js文件; js插件丢到src/js/plugins;
+
+运行grunt会输出至dist/css和dist/js目录
+
 ## Install
 
 进入文件根目录，下载grunt所需插件
@@ -5,12 +14,6 @@
 	npm install
 
 ## Usage
-
-编辑src/style.scss文件和src/global.js文件;
-
-js插件放到src/js/plugins;
-
-运行grunt会输出至dist目录
 
 // 移动端
 
