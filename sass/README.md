@@ -4,19 +4,26 @@
 
 	npm install
 
-## Useage
+## Usage
 
 // for mobile
+
 @mixin mobile
 
 // for ie
+
 @mixin inline-block
+
 @mixin opacity($opacity)
 
 // css3
+
 @mixin border-radius($radius)
+
 @mixin translate3d($x, $y, $z)
+
 @mixin transition($args...)
 
 // 垂直居中
+
 @mixin vercenter
