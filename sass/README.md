@@ -1,6 +1,6 @@
 ## Intro
 
-编辑 src/style.scss 文件和 src/global.js 文件; js 插件丢到 src/js/plugins;
+编辑 src/style.scss 文件和 src/global.js 文件；js 插件丢到 src/js/plugins；
 
 运行 grunt 会执行：
 
