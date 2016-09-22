@@ -74,6 +74,13 @@ module.exports = function(grunt){
 		    options: {
 		      spawn: false
 		    }
+		  },
+		  plugins: {
+		  	files: ['src/js/plugins/*.js'],
+		    tasks: ['uglify:plugins'],
+		    options: {
+		      spawn: false
+		    }
 		  }
 		}
 

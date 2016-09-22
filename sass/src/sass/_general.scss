@@ -2,9 +2,20 @@
 
 /* General
 ***********************/
+
+// 移动端改变盒模型
+*{
+	@include screen-sm{
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		-webkit-tap-highlight-color: transparent;
+	}
+}
 input[type="submit"], input[type="reset"], input[type="button"], select, button {
 	-webkit-appearance: none;
 }
+
 html, body{
 	margin: 0;
 	padding: 0;
@@ -18,11 +29,9 @@ a{
 	color: $link;
 	&:hover{
 		color: lighten($link, 20%);
-
 		> img{
 			@include opacity(.8);
 		}
-
 	}
 	&:active{
 		color: darken($link, 10%);
@@ -42,14 +51,20 @@ p{
 	float: right;
 }
 section{
-	margin: $margin;
+	margin: $margin 0;
 }
 .container{
 	position: relative;
-	// 这里添加媒体查询
 	width: 1000px;
 	height: 100%;
 	margin: 0 auto;
+	@include screen-md{
+		width: 750px;
+	}
+	@include screen-sm{
+		width: 92%;
+		margin: 0 4%;
+	}
 }
 img{
 	display: block;

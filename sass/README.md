@@ -1,23 +1,24 @@
 ## Intro
 
-前端模板
+编辑 src/style.scss 文件和 src/global.js 文件; js 插件丢到 src/js/plugins;
 
+运行 grunt 会执行：
 
-编辑src/style.scss文件和src/global.js文件; js插件丢到src/js/plugins;
+1、压缩合并输出至 dist/css 和 dist/js 目录
 
-运行grunt会输出至dist/css和dist/js目录
+2、监视改动（按2次 ctrl+c 可关闭）
 
 ## Install
 
-进入文件根目录，下载grunt所需插件
+进入文件根目录，下载 grunt 所需插件
 
 	npm install
 
 ## Usage
 
-// 移动端
+// 移动端自适应
 
-@include mobile
+使用.container包裹内容
 
 // utils
 
