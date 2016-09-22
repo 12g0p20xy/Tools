@@ -87,13 +87,21 @@ img{
 	outline: none;
 	@include border-radius(2px);
 }
-input[type="text"], textarea{
+input[type="text"]{
 	@include input-reset;
 	color: $font-color;
 	font-size: $btn-fz;
 	text-indent: .5em;
+	&:focus{
+		line-height: normal; // 光标大小不会占满input
+		line-height: 2\9; // 修复ie8
+	}
 }
 textarea{
+	@include input-reset;
+	color: $font-color;
+	font-size: $btn-fz;
+	text-indent: .5em;
 	height: auto;
 	resize: vertical;
 	overflow-y: auto;
