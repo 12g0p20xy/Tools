@@ -30,7 +30,7 @@
 
 // 水平垂直居中
 
-@include vercenter
+@include vcenter
 
 // 文本截取
 
