@@ -42,7 +42,7 @@
 
 @include border-radius(4px)
 
-@include translate(-50%, -50%) 或者 @include translate(-50%, -50%, 0)
+@include translate(-50%) 或者 @include translate(-50%, -50%, 0)
 
 @include box-shadow(3px 3px 6px rgba(0,0,0,.6));
 
