@@ -50,6 +50,7 @@ body, button, input, select, textarea {
 
 a {
   color: #2094c4;
+  outline: none;
   text-decoration: none; }
   a:hover {
     color: #64c0e6; }
@@ -71,9 +72,6 @@ p {
 .right {
   float: right; }
 
-section {
-  margin: 30px 0; }
-
 .container {
   position: relative;
   width: 1000px;
@@ -92,7 +90,7 @@ img {
 
 input[type="text"], textarea {
   display: block;
-  margin: 1em 0;
+  margin: 1em auto;
   width: 100%;
   height: 2em;
   padding: 0;
@@ -114,7 +112,7 @@ textarea {
 
 .btn, a.btn {
   display: block;
-  margin: 1em 0;
+  margin: 1em auto;
   width: 100%;
   height: 2em;
   padding: 0;
@@ -125,9 +123,6 @@ textarea {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   text-align: center;
   color: #fff;
   font-size: 16px;
@@ -148,11 +143,11 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0); }
   header .span1 {
     display: block; }
     @media (max-width: 48em) {
@@ -167,6 +162,9 @@ header {
   @media (max-width: 40em) {
     header .span3 {
       display: block; } }
+
+section {
+  margin: 30px auto; }
 
 .row {
   *zoom: 1; }
@@ -210,11 +208,11 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0); }
 
 .box2 {
   -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
@@ -252,11 +250,11 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0); }
 
 .s3 .grid-item {
   width: 25%;

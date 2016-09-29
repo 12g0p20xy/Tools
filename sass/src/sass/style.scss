@@ -61,6 +61,9 @@ header{
 		}
 	}
 }
+section{
+	margin: $margin auto;
+}
 .row{
 	@include clearfix;
 }

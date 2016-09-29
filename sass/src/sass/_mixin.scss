@@ -24,7 +24,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	@include translate(-50%, -50%);
+	@include translate(-50%, -50%, 0);
 }	
 
 // 文本截取
@@ -107,4 +107,12 @@
 	-ms-transition: $str;
 	-o-transition: $str;
 	transition: $str;
+}
+
+@mixin animation($str){
+	-webkit-animation: $str;
+	-moz-animation: $str;
+	-ms-animation: $str;
+	-o-animation: $str;
+	animation: $str;
 }

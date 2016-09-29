@@ -28,7 +28,7 @@
 
 @include clearfix
 
-// 水平垂直居中
+// 水平垂直居中(translate3d)
 
 @include vcenter
 
@@ -44,6 +44,8 @@
 
 @include translate(-50%, -50%) 或者 @include translate(-50%, -50%, 0)
 
-@include box-shadow(3px 3px 6px rgba(0,0,0,.6));
+@include box-shadow(3px 3px 6px rgba(0,0,0,.6))
 
 @include transition(opacity .3s ease-out)
+
+@include animation(show .3s ease-out forwards)
