@@ -2,36 +2,37 @@
 // 弹出框
 // 用法：Modal.init('#layer');
 
-var Modal = {
+var Modal = (function() {
 
-	layer: null,
-	closeBtn: null,
+	var layer = null,
+		closeBtn = null;
 
-	init: function(id) {
-	    this.layer = $(id);
-		this.closeBtn = this.layer.find('.close-btn');
-		Modal.show();
-	},
-
-    show: function(){
-		this.layer.addClass('show');
+    function show() {
+		layer.addClass('show');
 		$('body').css('overflow', 'hidden')
-			.children().not(this.layer).addClass('blur');
-		var _this = this;
+			.children().not(layer).addClass('blur');
 		$(document).on('click', function(event) {
-			if (event.target == _this.layer[0]) {
-				Modal.hide();
+			if (event.target == layer[0]) {
+				hide();
 			}
 		});
-		this.closeBtn.on('click', function(){
-			Modal.hide();
+		closeBtn.on('click', function(){
+			hide();
 		});
-	},
-
-	hide: function(){
-		this.layer.removeClass('show');
-		$('body').css('overflow', 'visible')
-			.children().not(this.layer).removeClass('blur');
 	}
+
+	function hide() {
+		layer.removeClass('show');
+		$('body').css('overflow', 'visible')
+			.children().not(layer).removeClass('blur');
+	}
+
+	return {
+		init: function(id) {
+		    layer = $(id);
+			closeBtn = layer.find('.close-btn');
+			show();
+		}
+	};
 	
-};
+})();
