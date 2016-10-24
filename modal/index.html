@@ -15,10 +15,15 @@
 <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<section class="container">
-		<button class="submit-btn btn">点 我！</button>
-	</section>
-	<div class="layer">
+	<main>
+		<section class="container">
+			<button class="submit-btn btn">点 我！</button>
+		</section>
+		<section class="container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor dolorum ea nisi, minus autem et soluta illum corporis, voluptatum vitae praesentium fuga quisquam? Fugiat incidunt eius neque iure.</p>
+		</section>
+	</main>
+	<div id="layer">
 		<div class="modal"><div class="container">
 			<h3>标 题</h3>
 			<input type="text" placeholder="姓名">
@@ -29,14 +34,14 @@
 		</div></div>
 	</div>
 	<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-	<script src="js/global.js"></script>
+	<script src="js/modal.js"></script>
 	<script>
 		$(function(){
 			var $submitBtn = $('.submit-btn').on('click', function(event) {
 				event.preventDefault();
-				$.modalShow();
+				Modal.init('#layer');
 			});
-		})
+		});
 	</script>
 </body>
 </html>

@@ -133,16 +133,16 @@ textarea {
   .btn:active, a.btn:active {
     background: #118cb5; }
 
-.layer {
+#layer {
   display: none;
   position: fixed;
   width: 100%;
   top: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.8); }
-  .layer.show {
+  #layer.show {
     display: block; }
-    .layer.show .modal {
+    #layer.show .modal {
       -webkit-animation: show 0.3s ease-out forwards;
       -moz-animation: show 0.3s ease-out forwards;
       -ms-animation: show 0.3s ease-out forwards;
