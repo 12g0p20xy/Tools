@@ -55,8 +55,7 @@ $btn-bg: #15B0E4;
 	width: 80%;
 	top: 20%;
 	left: 10%;
-	-webkit-transform: translate3d(-50%, -50%, 0);
-	transform: translate3d(-50%, -50%, 0);
+	@include translate(-50%, -50%, 0);
 	opacity: 0;
 	h3{
 		color: #fff;

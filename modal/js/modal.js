@@ -1,11 +1,10 @@
 
 // 弹出框
-// 用法：Modal.init('#layer');
 
 var Modal = (function() {
 
-	var layer = null,
-		closeBtn = null;
+	var layer = $('#layer'),
+		closeBtn = layer.find('.close-btn');
 
     function show() {
 		layer.addClass('show');
@@ -28,9 +27,7 @@ var Modal = (function() {
 	}
 
 	return {
-		init: function(id) {
-		    layer = $(id);
-			closeBtn = layer.find('.close-btn');
+		init: function() {
 			show();
 		}
 	};
