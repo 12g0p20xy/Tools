@@ -1,0 +1,37 @@
+@import "variables.less";
+@import "mixin.less";
+@import "responsive.less";
+
+// Global Components
+
+body {
+	// .serif-font;
+	font-size: 20px;
+	color: @gray-dark;
+}
+
+// Typography
+
+p {
+	line-height: 1.5;
+	margin: 30px 0;
+	a {
+		text-decoration: underline;
+	}
+}
+
+p{
+	// .sans-serif-font;
+	font-size: 30px;
+	color: red;
+	font-weight: bold;
+	.text-shadow(1px 1px 3px rgba(0,0,0,.6));
+	.ellipsis(3);
+	.transition-all;
+	&:hover{
+		.opacity(.6);
+	}
+	@media @screen-md {
+		color: blue;
+	}
+}

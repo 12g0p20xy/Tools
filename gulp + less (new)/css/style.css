@@ -1,0 +1,40 @@
+/*!
+ * Copyright 2017 monad
+ */
+@charset "utf-8";
+body {
+  font-size: 20px;
+  color: #333333;
+}
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+p a {
+  text-decoration: underline;
+}
+p {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+  -webkit-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  -moz-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+p:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+@media only screen and (max-width: 48em) {
+  p {
+    color: blue;
+  }
+}
