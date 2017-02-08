@@ -4,7 +4,7 @@
 
 .opacity(@opacity)
 
-.clearfix()
+.clearfix
 
 .box-shadow(@arguments)
 
