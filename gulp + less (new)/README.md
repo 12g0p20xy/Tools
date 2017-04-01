@@ -34,5 +34,3 @@ p{
 	}
 }
 ```
-
-来源：[How to use Less for media query variables in responsive design](https://www.vodori.com/use-less-media-query-variables-responsive-design/)

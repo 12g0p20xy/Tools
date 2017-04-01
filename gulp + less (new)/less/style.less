@@ -1,8 +1,33 @@
-@import "reset";
-@import "variables";
 @import "mixin";
 @import "responsive";
 @import "general";
+
+// Variables
+
+// 主题色
+@primary-color: #da001d;
+@secondary-color: #FFE980;
+
+// 主间距
+@margin: 30px;
+@padding: 15px;
+
+// 背景
+@body-bg: #f9f9f9;
+
+// 链接
+@link: #fff;
+
+// 字体
+@font-color: #333;
+@font-size: 16px;
+@line-height: 1.7;
+@font-family: ~"'helvetica neue', tahoma, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif";
+
+// 按钮
+@btn-color: #fff;
+@btn-fz: 16px;
+@btn-bg: #444965;
 
 // Custom
 
@@ -16,7 +41,23 @@ p{
 	&:hover{
 		.opacity(.6);
 	}
+}
+
+.lg{
+	display: none;
+	@media @screen-lg {
+		display: block;
+	}
+}
+.md{
+	display: none;
 	@media @screen-md {
-		color: blue;
+		display: block;
+	}
+}
+.sm{
+	display: none;
+	@media @screen-sm {
+		display: block;
 	}
 }
