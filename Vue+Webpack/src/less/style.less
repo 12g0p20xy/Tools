@@ -1,0 +1,53 @@
+@import "mixin";
+@import "responsive";
+@import "variables";
+@import "general";
+
+// Custom
+
+body {
+  padding-top: 5%;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 36px;
+  color: @primary-color;
+}
+
+.container {
+  outline: 1px solid red;
+  padding: 15px;
+}
+
+.links {
+  padding: .2em;
+  .transition(background .3s ease-out);
+
+  a {
+    display: block;
+  }
+
+  &:hover {
+    background: #e3e3e3;
+    
+    a {
+      color: @primary-color;
+    }
+  }
+
+  
+}
+
+#logo {
+  .inline-block;
+  width: 50px;
+  padding-top: 12px;
+}
+
+#static-img {
+  width: 200px;
+}
