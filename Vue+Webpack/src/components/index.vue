@@ -7,6 +7,7 @@
     <div v-for="id in 10" class="links">
       <router-link :to="{name: 'page', params: { id: id }}">page{{ id }}</router-link>
     </div>
+    <div id="cover"></div>
   </div>
 </template>
 

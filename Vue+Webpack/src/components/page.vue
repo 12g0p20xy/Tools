@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3>Here is page{{ page }}.</h3>
-    <img id="static-img" src="/static/smile.gif" alt="">
+    <img id="static-img" src="static/smile.gif" alt="">
   </div>
 </template>
 
