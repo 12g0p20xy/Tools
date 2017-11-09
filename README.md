@@ -8,4 +8,4 @@ gulp + less：基于 less 和 gulp 的模板
 
 webpack: 打包工具
 
-Vue + webpack：在 Vue-loader 基础上改造的模板
+Vue + webpack：Vue-cli 修改版
